@@ -1,6 +1,4 @@
-Here's a sample README file with emojis, structured based on your request:
 
----
 
 # 🛠️ Sentry Integration Project
 
