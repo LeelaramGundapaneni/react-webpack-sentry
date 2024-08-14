@@ -137,6 +137,20 @@ class App extends Component {
     // );
   }
 
+  createError() {
+    console.log("createError message");
+
+    throw new Error("Intentional error 123");
+
+    // try {
+    //   // Code that might throw an error
+    //   throw new Error("Intentional error 123");
+    // } catch (error) {
+    //   getHub()?.captureException(error); // Explicitly tell Sentry to capture the error
+    //   console.error("Error caught:", error); // Log the error to the console for debugging
+    // }
+  }
+
   render() {
     const total = this.state.cart.reduce((t, i) => t + i.price, 0);
     const cartDisplay = this.state.cart.reduce((c, { id }) => {
@@ -221,6 +235,7 @@ class App extends Component {
               Empty cart
             </button>
           )}
+          <button onClick={this.createError}>Create error </button>
         </div>
       </div>
     );
